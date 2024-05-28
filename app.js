@@ -1,7 +1,7 @@
-const a = ""
+const a = "";
 
-const foo = (t) => {
-  return t
+const foo = t => {
+  return t;
 };
 
-foo(a)
+foo(a);
