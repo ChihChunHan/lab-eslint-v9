@@ -8,5 +8,24 @@ export default [
   // https://eslint.vuejs.org/user-guide/
   ...pluginVue.configs["flat/recommended"],
   // https://github.com/prettier/eslint-plugin-prettier#configuration-new-eslintconfigjs
-  eslintPluginPrettierRecommended
+  eslintPluginPrettierRecommended,
+  {
+    files: ["tests/**/*.js"],
+    languageOptions: {
+      globals: {
+        suite: "writable",
+        test: "writable",
+        describe: "writable",
+        it: "writable",
+        expect: "writable",
+        assert: "writable",
+        vitest: "writable",
+        vi: "writable",
+        beforeAll: "writable",
+        afterAll: "writable",
+        beforeEach: "writable",
+        afterEach: "writable"
+      }
+    }
+  }
 ];
